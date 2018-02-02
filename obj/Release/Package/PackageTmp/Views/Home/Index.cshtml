@@ -1,0 +1,75 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="well">
+
+    <ul class="nav nav-tabs"">
+        <li role="presentation" class="pointer active"><a>Add</a></li>
+        <li role="presentation"  class="pointer"><a>List</a></li>
+        <li role="presentation"  class="pointer"><a>Search</a></li>
+    </ul>
+
+    <div id="elements">
+        <form id="addElements" class="form-group">
+            <fieldset>
+                <br />
+                <p>
+                    <label>Course Name:</label>
+                    <input id="nameElement" data-rule-minlength="2" data-msg-minlength="At least two chararacters" class="form-control" required>
+                </p>
+                <p>
+                    <label>Course Credits:</label>
+                    <input id="creditElement" type="number" class="form-control" required>
+                </p>
+                    <label>Course Duration:</label>
+                    <input id="durationElement" type="number" class="form-control" required>
+                <p>
+                    <label>Course Tutor:</label>
+                    <input id="tutorElement" data-rule-minlength="2" data-msg-minlength="At least two chararacters" class="form-control" required>
+                </p>
+                <p>
+                    <button class="btn btn-default submit" type="submit" value="Submit">Submit</button>
+                </p>
+            </fieldset>
+       </form>
+        
+        <div class="btn-group" style="display: none;" id="typeElement" role="group" aria-label="...">
+            <button type="button" class="btn btn-default active">Default</button>
+            <button type="button" class="btn btn-default">JSON</button>
+            <button type="button" class="btn btn-default">XML</button>
+        </div>
+
+        <div style="display: none;" id="listElements">
+            <br />
+            <select>
+                <option value="All">All</option>
+                <option value="courseID">Course ID</option>
+                <option value="courseName">Course Name</option>
+                <option value="courseCredits">Course Credit</option>
+                <option value="courseDuration">Course Duration</option>
+                <option value="courseTutor">Course Tutor</option>
+            </select>
+        </div>
+        <div style="display: none;" id="searchElements">
+            <br />
+            <select>
+                <option value="All">All</option>
+                <option value="courseID">Course ID</option>
+                <option value="courseName">Course Name</option>
+                <option value="courseCredits">Course Credit</option>
+                <option value="courseDuration">Course Duration</option>
+                <option value="courseTutor">Course Tutor</option>
+            </select>
+            <div class="form-group">
+                <input id="searchBox" class="form-control">
+            </div>   
+            <button class="btn btn-default" type="button">Search</button>
+        </div>
+        <div id="dataArea"></div>
+        <textarea style="display: none;" id="txtArea" rows="10" cols="600"></textarea>
+    </div>
+    
+   
+
+</div>
